@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  min-height: 100vh;
+  background: #dde1e7;
+}
+
+.squire {
+  height: 150px;
+  width: 150px;
+  background-color: #dde1e7;
+  border-radius: 5px;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 44%);
+}
+.squire2 {
+  height: 150px;
+  width: 150px;
+  background-color: #dde1e7;
+  border-radius: 5px;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 3px 3px 5px rgba(94, 104, 121, 44%);
+}
+.circle {
+  height: 150px;
+  width: 150px;
+  background-color: #dde1e7;
+  border-radius: 50%;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 44%);
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 3px 3px 5px rgba(94, 104, 121, 44%);
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    flex-direction: column;
+  }
+}
